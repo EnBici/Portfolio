@@ -5,43 +5,49 @@ import jsIcon from '../assets/javascript.png'
 import cssIcon from '../assets/css.png'
 import cicon from '../assets/c++.png'
 
+const LEVELS = {
+  basico: { label: 'Básico', pct: 40 },
+  intermedio: { label: 'Intermedio', pct: 65 },
+  avanzado: { label: 'Avanzado', pct: 90 },
+}
+
 const SKILLS = [
   {
     name: 'Express',
-    level: 90,
+    level: 'avanzado',
     icon: <img src={expressIcon} alt="Express" />,
   },
   {
     name: 'React Native',
-    level: 85,
+    level: 'intermedio',
     icon: (
       <img src={reactIcon} alt="React Native" />
     ),
   },
   {
     name: 'React',
-    level: 88,
+    level: 'avanzado',
     icon: (
       <img src={reactIcon} alt="React Native" />
     ),
   },
   {
     name: 'JavaScript',
-    level: 92,
+    level: 'avanzado',
     icon: (
       <img src={jsIcon} alt="JavaScript" />
     ),
   },
   {
     name: 'HTML & CSS',
-    level: 95,
+    level: 'avanzado',
     icon: (
       <img src={cssIcon} alt="HTML & CSS" />
     ),
   },
   {
     name: 'C++',
-    level: 85,
+    level: 'intermedio',
     icon: (
       <img src={cicon} alt="C++" />
     ),
@@ -75,12 +81,12 @@ function Skills() {
             <div className="skill-info">
               <div className="skill-top">
                 <span className="skill-name">{skill.name}</span>
-                <span className="skill-level">{skill.level}%</span>
+                <span className="skill-level">{LEVELS[skill.level].label}</span>
               </div>
               <div className="skill-bar">
                 <span
                   className="skill-fill"
-                  style={{ '--level': `${skill.level}%` }}
+                  style={{ '--level': `${LEVELS[skill.level].pct}%` }}
                 />
               </div>
             </div>

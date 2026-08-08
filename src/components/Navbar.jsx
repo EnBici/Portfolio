@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react'
-//import logo from '../assets/favicon.svg'
+
 
 const NAV_LINKS = [
   { label: 'Inicio', href: '#inicio' },
   { label: 'Habilidades', href: '#habilidades' },
-  { label: 'Proyectos', href: '#proyectos' },
+  /*{ label: 'Proyectos', href: '#proyectos' },*/
   { label: 'Contacto', href: '#contacto' },
 ]
 
@@ -23,10 +23,7 @@ function Navbar() {
     <header className={`navbar ${scrolled ? 'is-scrolled' : ''}`}>
       <nav className="navbar-inner">
        
-        {/*<a href="#inicio" className="navbar-brand" onClick={() => setOpen(false)}>
-          <img src={logo} alt="Logo" className="navbar-logo" />
-          <span className="navbar-name">fs<span>.</span>dev</span>
-        </a>*/}
+       
 
         <button
           type="button"
